@@ -1,0 +1,65 @@
+[
+  {
+    "document_id": "bench-001",
+    "pages": {
+      "1": "Full Name: Alex Carter\nDate of Birth: 1990-01-01\nPassport Number: A1234567",
+      "2": "Full Name: Alex Karter\nDate of Birth: 1990-01-01\nPassport Number: A1234567"
+    },
+    "expected_issues": [
+      {
+        "category": "name",
+        "field": "full_name",
+        "expected": "Alex Carter",
+        "found": "Alex Karter"
+      }
+    ]
+  },
+  {
+    "document_id": "bench-002",
+    "pages": {
+      "1": "Email: alex@@mail\nPhone: 123"
+    },
+    "expected_issues": [
+      {
+        "category": "other",
+        "field": "email",
+        "expected": "valid email address",
+        "found": "alex@@mail"
+      },
+      {
+        "category": "other",
+        "field": "phone",
+        "expected": "valid phone number",
+        "found": "123"
+      }
+    ]
+  },
+  {
+    "document_id": "bench-003",
+    "pages": {
+      "1": "Issue Date: 2030-01-01\nExpiry Date: 2029-01-01"
+    },
+    "expected_issues": [
+      {
+        "category": "date",
+        "field": "issue_vs_expiry",
+        "expected": "2029-01-01",
+        "found": "2030-01-01"
+      }
+    ]
+  },
+  {
+    "document_id": "bench-004",
+    "pages": {
+      "1": "Income: twenty thousand"
+    },
+    "expected_issues": [
+      {
+        "category": "financial",
+        "field": "income",
+        "expected": "valid amount",
+        "found": "twenty thousand"
+      }
+    ]
+  }
+]

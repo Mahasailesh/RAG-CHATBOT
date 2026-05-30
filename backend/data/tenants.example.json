@@ -1,0 +1,9 @@
+{
+  "tenants": {
+    "example-tenant": {
+      "token_hash": "sha256:REPLACE_WITH_SHA256_HASH",
+      "allowed_providers": ["gemini", "openai"],
+      "allow_byok": true
+    }
+  }
+}

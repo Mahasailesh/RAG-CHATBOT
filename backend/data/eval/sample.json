@@ -1,0 +1,17 @@
+[
+  {
+    "document_id": "sample-001",
+    "pages": {
+      "1": "Full Name: Alex Carter\nDate of Birth: 1990-01-01\nPassport Number: A1234567",
+      "2": "Full Name: Alex Carter\nDate of Birth: 1990-01-02\nPassport Number: A1234567"
+    },
+    "expected_issues": [
+      {
+        "category": "date",
+        "field": "date_of_birth",
+        "expected": "1990-01-01",
+        "found": "1990-01-02"
+      }
+    ]
+  }
+]

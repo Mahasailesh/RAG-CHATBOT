@@ -1,0 +1,2 @@
+%PDF-1.4
+% Mock PDF for Playwright tests. Content is not parsed when NEXT_PUBLIC_E2E_MOCK=true.
